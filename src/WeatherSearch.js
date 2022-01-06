@@ -73,8 +73,8 @@ export default function WeatherSearch() {
         <div className={"item"}>
           <Loader
             type="heart"
-            bgColor={"#FFFFFF"}
-            color={"#FFFFFF"}
+            bgColor={"#AD075D"}
+            color={"#AD075D"}
             size={100}
           />
         </div>
