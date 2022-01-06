@@ -40,8 +40,8 @@ export default function WeatherSearch() {
         <div className={"item"}>
           <Loader
             type="heart"
-            bgColor={"#FFFFFF"}
-            color={"#FFFFFF"}
+            bgColor={"#AD075D"}
+            color={"#AD075D"}
             size={100}
           />
         </div>
@@ -55,12 +55,22 @@ export default function WeatherSearch() {
           <input type="Submit" defaultValue="Search" />
         </form>
         <ul>
-          <li>Temperature: {temperature}</li>
-          <li>Description: {description}</li>
-          <li>Humidity: {humidity}%</li>
-          <li>Wind:{wind}km/h </li>
           <li>
-            <img src={icon} alt="" />
+            <strong>Description:</strong> {description}
+          </li>
+          <li>
+            <strong>Temperature:</strong> {temperature}
+          </li>
+          <li>
+            <strong>Humidity:</strong> {humidity}%
+          </li>
+          <li>
+            <strong>Wind:</strong>
+            {wind}km/h{" "}
+          </li>
+          <br />
+          <li className="weather-icon">
+            <img src={icon} alt="weather icon" />
             {""}
           </li>
         </ul>
@@ -78,7 +88,7 @@ export default function WeatherSearch() {
             size={100}
           />
         </div>
-        <h1>Weather App</h1>
+        <h2>It's a lovely day today!</h2>
         <form onSubmit={handleSearch}>
           <input
             type="Search"

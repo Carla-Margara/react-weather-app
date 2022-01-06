@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+ul {
+  list-style-type: none;
+  text-align: left;
+  font-size: 16px;
+  font-style: monospace;
+}
+
+.weather-icon {
+  text-align: center;
+}
