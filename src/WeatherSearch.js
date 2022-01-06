@@ -45,7 +45,7 @@ export default function WeatherSearch() {
             size={100}
           />
         </div>
-        <h1>Weather App</h1>
+        <h2>It's a lovely day today!</h2>
         <form onSubmit={handleSearch}>
           <input
             type="search"
