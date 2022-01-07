@@ -1,0 +1,13 @@
+.footer {
+  font-size: 15px;
+}
+
+.footer a {
+  color: rgb(92, 18, 88);
+  text-decoration: none;
+}
+
+.repository-link {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
