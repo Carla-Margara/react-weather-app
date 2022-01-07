@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Loader from "react-js-loader";
+import "./WeatherSearch.css";
 
 export default function WeatherSearch() {
-  let [WeatherSearch, SetWeatherSearch] = useState(false);
-  let [temperature, setTemperature] = useState(null);
-  let [description, setDescription] = useState(null);
-  let [humidity, setHumidity] = useState(null);
-  let [wind, setWind] = useState(null);
-  let [city, setCity] = useState(null);
-  let [icon, setIcon] = useState(null);
+  const [WeatherSearch, SetWeatherSearch] = useState(false);
+  const [temperature, setTemperature] = useState(null);
+  const [description, setDescription] = useState(null);
+  const [humidity, setHumidity] = useState(null);
+  const [wind, setWind] = useState(null);
+  const [city, setCity] = useState(null);
+  const [icon, setIcon] = useState(null);
 
   function handleSearch(event) {
     event.preventDefault();
@@ -47,12 +48,22 @@ export default function WeatherSearch() {
         </div>
         <h2>It's a lovely day today!</h2>
         <form onSubmit={handleSearch}>
-          <input
-            type="search"
-            onChange={changeCity}
-            placeholder="Enter a city..."
-          />
-          <input type="Submit" defaultValue="Search" />
+          <div className="row">
+            <div className="col-sm-9">
+              <input
+                type="search"
+                onChange={changeCity}
+                placeholder="Enter a city..."
+              />
+            </div>
+            <div className="col-sm-3">
+              <input
+                className="btn btn-light"
+                type="Submit"
+                defaultValue="Search"
+              />
+            </div>
+          </div>
         </form>
         <ul>
           <li>
