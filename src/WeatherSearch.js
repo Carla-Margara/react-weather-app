@@ -38,68 +38,80 @@ export default function WeatherSearch() {
   if (WeatherSearch) {
     return (
       <div className="Search">
-        <div className={"item"}>
-          <Loader
-            type="heart"
-            bgColor={"#AD075D"}
-            color={"#AD075D"}
-            size={100}
-          />
-        </div>
-        <h2>It's a lovely day today!</h2>
-        <form onSubmit={handleSearch}>
-          <div className="row">
-            <div className="col-sm-9">
-              <input
-                type="search"
-                onChange={changeCity}
-                placeholder="Enter a city..."
-              />
-            </div>
-            <div className="col-sm-3">
-              <input
-                className="btn btn-light"
-                type="Submit"
-                defaultValue="Search"
-              />
-            </div>
+        <div class="search-city">
+          <div class="container-fluid">
+            <form class="d-flex" id="search-form" onSubmit={handleSearch}>
+              <div className="row">
+                <div className="col-sm-9">
+                  <input
+                    type="search"
+                    onChange={changeCity}
+                    placeholder="Enter a city..."
+                  />
+                </div>
+                <div className="col-sm-3">
+                  <input
+                    className="btn btn-light"
+                    type="Submit"
+                    defaultValue="Search"
+                  />
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
-        <ul>
-          <li>
-            <strong>Description:</strong> {description}
-          </li>
-          <li>
-            <strong>Temperature:</strong> {temperature}
-          </li>
-          <li>
-            <strong>Humidity:</strong> {humidity}%
-          </li>
-          <li>
-            <strong>Wind:</strong>
-            {wind}km/h{" "}
-          </li>
-          <br />
-          <li className="weather-icon">
-            <img src={icon} alt="weather icon" />
-            {""}
-          </li>
-        </ul>
+        </div>
+        <br />
+        <div className="city-name mb-5">
+          <h1>{city}</h1>
+        </div>
+        <div className="weather-today">
+          <div className="row">
+            {" "}
+            <div className="col" id="weather-icon">
+              <img src={icon} alt="weather icon" />
+              {""}
+            </div>
+            <div className="col temp">{temperature} </div>
+            <div className="col degrees">
+              <span className="Celcius">℃</span> |{" "}
+              <span className="Fahrenheit">℉</span>
+            </div>{" "}
+            <div className="col" id="description">
+              {description}
+            </div>{" "}
+            <div className="col" id="stats">
+              {" "}
+              <ul>
+                {" "}
+                <li>
+                  <strong>Humidity:</strong> {humidity}%
+                </li>
+                <li>
+                  <strong>Wind:</strong>
+                  {wind}km/h{" "}
+                </li>
+              </ul>
+            </div>
+            <br />
+          </div>
+        </div>
       </div>
     );
   } else {
     return (
       <div>
-        {" "}
-        <div className={"item"}>
-          <Loader
-            type="heart"
-            bgColor={"#AD075D"}
-            color={"#AD075D"}
-            size={100}
-          />
-        </div>
-        <h2>It's a lovely day today!</h2>
+        <div className="bublle-scale mb-4">
+          {" "}
+          <span className={"item"}>
+            <Loader
+              type="bubble-scale"
+              bgColor={"#AD075D"}
+              color={"#AD075D"}
+              size={80}
+            />
+          </span>
+          <span>Where are you now?</span>
+        </div>{" "}
         <form onSubmit={handleSearch}>
           <input
             type="Search"
@@ -108,7 +120,7 @@ export default function WeatherSearch() {
           />
           <input type="Submit" defaultValue="Search" />
         </form>
-        <h5>{""}</h5>
+        <br />
       </div>
     );
   }

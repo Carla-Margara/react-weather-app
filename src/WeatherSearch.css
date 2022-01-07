@@ -1,3 +1,29 @@
+h1 {
+  font-size: 45px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 550;
+  line-height: 35px;
+  color: rgb(5, 5, 5);
+  text-align: justify;
+}
+
+.weather-today .temp {
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+  top: 15px;
+  left: 20px;
+}
+
+.degrees {
+  font-size: 20px;
+  position: relative;
+  top: 6px;
+  right: 35px;
+  color: rgb(73, 73, 73);
+}
+
 ul {
   list-style-type: none;
   text-align: left;
