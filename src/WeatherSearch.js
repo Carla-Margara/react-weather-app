@@ -37,62 +37,80 @@ export default function WeatherSearch() {
 
   if (WeatherSearch) {
     return (
-      <div className="Search">
-        <div class="search-city">
-          <div class="container-fluid">
-            <form class="d-flex" id="search-form" onSubmit={handleSearch}>
-              <div className="row">
-                <div className="col-sm-9">
-                  <input
-                    type="search"
-                    onChange={changeCity}
-                    placeholder="Enter a city..."
-                  />
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="search-city">
+              <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                  <form class="d-flex" id="search-form" onSubmit={handleSearch}>
+                    <input
+                      className="form-control me-2"
+                      type="search"
+                      onChange={changeCity}
+                      placeholder="Enter a city..."
+                      aria-label="Search"
+                      id="city-text-input"
+                      autocomplete="off"
+                    />
+                    <button
+                      className="btn btn-outline-info me-2"
+                      type="Submit"
+                      defaultValue="Search"
+                      id="search-city"
+                    >
+                      Search
+                    </button>
+                  </form>
                 </div>
-                <div className="col-sm-3">
-                  <input
-                    className="btn btn-light"
-                    type="Submit"
-                    defaultValue="Search"
-                  />
+              </nav>
+            </div>
+          </div>
+          <br />
+          <div className="city-name mb-4">
+            <h1>{city}</h1>
+          </div>
+          <div className="temp">
+            {" "}
+            <span className="main-temp">{temperature}</span>
+            <span className="degrees">℃ | ℉</span>{" "}
+          </div>
+          <div className="container px-4 weather-today mb-4">
+            <div className="row gx-5">
+              <div className="col">
+                <div className="p-3 border">
+                  <div className="weather-icon">
+                    <img src={icon} alt="weather icon" />
+                    {""}
+                  </div>
+                  <br />
+                  <div className="description">{description}</div>{" "}
                 </div>
               </div>
-            </form>
-          </div>
-        </div>
-        <br />
-        <div className="city-name mb-5">
-          <h1>{city}</h1>
-        </div>
-        <div className="weather-today">
-          <div className="row">
-            {" "}
-            <div className="col" id="weather-icon">
-              <img src={icon} alt="weather icon" />
-              {""}
+              <div className="col">
+                <div className="p-3 border">
+                  <div>
+                    <h4 class="weekday text-muted">Thursday</h4>
+                    <p class="time fw-bold">19:33</p>
+                  </div>
+                  <br />
+                  <div className="stats">
+                    {" "}
+                    <ul>
+                      {" "}
+                      <li>
+                        <strong>Humidity:</strong> {humidity}%
+                      </li>
+                      <li>
+                        <strong>Wind:</strong>
+                        {wind}km/h{" "}
+                      </li>
+                    </ul>
+                  </div>
+                  <br />
+                </div>
+              </div>
             </div>
-            <div className="col temp">{temperature} </div>
-            <div className="col degrees">
-              <span className="Celcius">℃</span> |{" "}
-              <span className="Fahrenheit">℉</span>
-            </div>{" "}
-            <div className="col" id="description">
-              {description}
-            </div>{" "}
-            <div className="col" id="stats">
-              {" "}
-              <ul>
-                {" "}
-                <li>
-                  <strong>Humidity:</strong> {humidity}%
-                </li>
-                <li>
-                  <strong>Wind:</strong>
-                  {wind}km/h{" "}
-                </li>
-              </ul>
-            </div>
-            <br />
           </div>
         </div>
       </div>
