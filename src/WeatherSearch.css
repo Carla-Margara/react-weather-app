@@ -1,27 +1,68 @@
-h1 {
-  font-size: 45px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 550;
-  line-height: 35px;
-  color: rgb(5, 5, 5);
-  text-align: justify;
+.card {
+  display: block;
+  margin: 0px auto;
+  max-width: 700px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
-.weather-today .temp {
-  font-size: 80px;
-  font-weight: 500;
-  line-height: 1;
+.search-city {
+  display: block;
+  margin: 0px auto;
+  max-width: 700px;
+  margin-top: 2%;
+}
+.d-flex {
   position: relative;
-  top: 15px;
-  left: 20px;
+  width: 700px;
+}
+
+h1 {
+  font-size: 45px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 550;
+  line-height: 35px;
+  color: rgba(5, 5, 5, 0.514);
+  text-align: center;
+  position: relative;
+  right: 170px;
+}
+
+.weekday {
+  font-size: 18px;
+  text-align: center;
+}
+
+.time {
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+}
+
+.main-temp {
+  text-align: center;
+  font-size: 100px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: relative;
+  left: 150px;
 }
 
 .degrees {
   font-size: 20px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   position: relative;
-  top: 6px;
-  right: 35px;
+  bottom: 55px;
+  text-align: center;
+  position: relative;
+  left: 150px;
   color: rgb(73, 73, 73);
+}
+
+.weather-today .description {
+  color: rgb(41, 163, 233);
+  font-size: 25px;
+  text-align: center;
 }
 
 ul {
@@ -32,5 +73,8 @@ ul {
 }
 
 .weather-icon {
+  text-align: center;
+}
+.stats {
   text-align: center;
 }

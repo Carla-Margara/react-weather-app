@@ -12,7 +12,7 @@ export default function Footer() {
         </small>
         |
         <small className="text-muted">
-          <a href="https://github.com/Carla-Margara/My-Weather-App">
+          <a href="https://github.com/Carla-Margara/react-weather-app">
             Open-Source Code {""}
           </a>
           by Carla Margara
