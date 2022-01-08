@@ -67,47 +67,48 @@ export default function WeatherSearch() {
             </div>
           </div>
           <br />
-          <div className="city-name mb-4">
-            <h1>{city}</h1>
-          </div>
-          <div className="temp">
-            {" "}
-            <span className="main-temp">{temperature}</span>
-            <span className="degrees">℃ | ℉</span>{" "}
-          </div>
-          <div className="container px-4 weather-today mb-4">
-            <div className="row gx-5">
+          <div className="container px-4 weather-today mb-2">
+            <div className="row">
               <div className="col">
-                <div className="p-3 border">
-                  <div className="weather-icon">
-                    <img src={icon} alt="weather icon" />
-                    {""}
-                  </div>
+                <div className="city-name mt-4">
                   <br />
-                  <div className="description">{description}</div>{" "}
+                  <h1>{city}</h1>
                 </div>
               </div>
               <div className="col">
-                <div className="p-3 border">
-                  <div>
-                    <h4 class="weekday text-muted">Thursday</h4>
-                    <p class="time fw-bold">19:33</p>
-                  </div>
-                  <br />
-                  <div className="stats">
-                    {" "}
-                    <ul>
-                      {" "}
-                      <li>
-                        <strong>Humidity:</strong> {humidity}%
-                      </li>
-                      <li>
-                        <strong>Wind:</strong>
-                        {wind}km/h{" "}
-                      </li>
-                    </ul>
-                  </div>
-                  <br />
+                <div className="temp">
+                  <span className="main-temp">{temperature}</span>
+                  <span className="degrees">℃ | ℉</span>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container px-4 weather-today">
+            <div className="row">
+              <div className="col">
+                <div className="weather-icon">
+                  <img src={icon} alt="weather icon" />
+                </div>
+                <div className="description">{description}</div>
+
+                <br />
+              </div>
+
+              <div className="col">
+                <div className="stats">
+                  <ul>
+                    <li className="weekday text-muted">Thursday</li>
+                    <li className="time fw-bold">19:33</li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <strong>Humidity:</strong> {humidity}%
+                    </li>
+                    <li>
+                      <strong>Wind:</strong>
+                      {wind}km/h
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
