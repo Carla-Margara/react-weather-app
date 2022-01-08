@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import Loader from "react-js-loader";
 
 export default function Footer() {
   return (
@@ -17,14 +16,6 @@ export default function Footer() {
           </a>
           by Carla Margara
         </small>
-        <div className={"item"}>
-          <Loader
-            type="heart"
-            bgColor={"#AD075D"}
-            color={"#AD075D"}
-            size={20}
-          />
-        </div>{" "}
       </p>
     </div>
   );
