@@ -90,7 +90,6 @@ export default function WeatherSearch() {
                   <img src={icon} alt="weather icon" />
                 </div>
                 <div className="description">{description}</div>
-
                 <br />
               </div>
 
