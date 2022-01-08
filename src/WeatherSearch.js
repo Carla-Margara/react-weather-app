@@ -117,28 +117,55 @@ export default function WeatherSearch() {
     );
   } else {
     return (
-      <div>
-        <div className="bublle-scale mb-4">
-          {" "}
-          <span className={"item"}>
-            <Loader
-              type="bubble-scale"
-              bgColor={"#AD075D"}
-              color={"#AD075D"}
-              size={80}
-            />
-          </span>
-          <span>Where are you now?</span>
-        </div>{" "}
-        <form onSubmit={handleSearch}>
-          <input
-            type="Search"
-            placeholder="Enter a city..."
-            onChange={changeCity}
-          />
-          <input type="Submit" defaultValue="Search" />
-        </form>
-        <br />
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="search-city">
+              <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                  <form class="d-flex" id="search-form" onSubmit={handleSearch}>
+                    <input
+                      className="form-control me-2"
+                      type="search"
+                      onChange={changeCity}
+                      placeholder="Enter a city..."
+                      aria-label="Search"
+                      id="city-text-input"
+                      autocomplete="off"
+                    />
+                    <button
+                      className="btn btn-outline-info me-2"
+                      type="Submit"
+                      defaultValue="Search"
+                      id="search-city"
+                    >
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <br />
+          <div className="bubble-scale mb-4">
+            <ul>
+              <li className="text-question">
+                <span>How is the weather in your city?</span>
+              </li>
+              <li className="icon-bubble">
+                {" "}
+                <span className={"item"}>
+                  <Loader
+                    type="bubble-ping"
+                    bgColor={"#A2EBF0"}
+                    color={"#A2EBF0"}
+                    size={80}
+                  />
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
   }
