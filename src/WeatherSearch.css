@@ -89,11 +89,14 @@ ul {
     font-size: 30px;
   }
   .main-temp {
-    font-size: 55px;
+    font-size: 45px;
+    left: 5px;
   }
 
   .degrees {
     font-size: 12px;
+    left: 10px;
+    bottom: 30px;
   }
 
   .description {
