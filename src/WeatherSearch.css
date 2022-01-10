@@ -57,8 +57,10 @@ h1 {
 
 .weather-today .description {
   color: rgb(41, 163, 233);
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
+  position: relative;
+  bottom: 30px;
 }
 
 ul {
@@ -70,6 +72,8 @@ ul {
 
 .weather-icon {
   text-align: center;
+  position: relative;
+  bottom: 50px;
 }
 .stats {
   text-align: center;
@@ -78,4 +82,28 @@ ul {
 
 .bubble-scale .text-question {
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 30px;
+  }
+  .main-temp {
+    font-size: 80px;
+  }
+
+  .degrees {
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .weekday {
+    font-size: 20px;
+  }
+  .time {
+    font-size: 16px;
+  }
 }

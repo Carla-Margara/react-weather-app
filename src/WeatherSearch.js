@@ -67,10 +67,10 @@ export default function WeatherSearch() {
             </div>
           </div>
           <br />
-          <div className="container px-4 weather-today mb-2">
+          <div className="container px-4 weather-today">
             <div className="row">
               <div className="col">
-                <div className="city-name mt-4">
+                <div className="city-name">
                   <br />
                   <h1>{city}</h1>
                 </div>
