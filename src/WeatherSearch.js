@@ -4,7 +4,7 @@ import Loader from "react-js-loader";
 import "./WeatherSearch.css";
 
 export default function WeatherSearch() {
-  const [WeatherSearch, SetWeatherSearch] = useState(false);
+  const [ready, setReady] = useState(false);
   const [temperature, setTemperature] = useState(null);
   const [description, setDescription] = useState(null);
   const [humidity, setHumidity] = useState(null);
@@ -21,7 +21,7 @@ export default function WeatherSearch() {
   }
 
   function getForecast(response) {
-    SetWeatherSearch(true);
+    setReady(true);
     setTemperature(Math.round(response.data.main.temp));
     setDescription(response.data.weather[0].description);
     setHumidity(response.data.main.humidity);
@@ -35,7 +35,7 @@ export default function WeatherSearch() {
     setCity(event.target.value);
   }
 
-  if (WeatherSearch) {
+  if (ready) {
     return (
       <div class="container">
         <div class="card">

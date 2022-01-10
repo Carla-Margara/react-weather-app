@@ -1,7 +1,7 @@
 .card {
   display: block;
   margin: 0px auto;
-  max-width: 600px;
+  max-width: 550px;
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -9,20 +9,19 @@
 .search-city {
   display: block;
   margin: 0px auto;
-  max-width: 600px;
+  max-width: 550px;
   margin-top: 2%;
 }
 .d-flex {
   position: relative;
-  width: 600px;
+  width: 550px;
 }
 
 h1 {
-  font-size: 35px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-weight: 550;
-  line-height: 35px;
-  color: rgba(5, 5, 5, 0.514);
+  font-size: 40px;
+  font-family: monospace;
+  line-height: 10px;
+  color: black;
   text-align: center;
 }
 
