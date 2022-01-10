@@ -18,7 +18,7 @@
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 35px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 550;
   line-height: 35px;
@@ -35,27 +35,25 @@ h1 {
   line-height: 1;
 }
 
-.main-temp {
+.temp {
   text-align: center;
-  font-size: 100px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: relative;
-  left: 30px;
+}
+
+.main-temp {
+  font-size: 60px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .degrees {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   position: relative;
   bottom: 55px;
-  text-align: center;
-  position: relative;
-  left: 40px;
   color: rgb(73, 73, 73);
 }
 
-.weather-today .description {
+.description {
   color: rgb(41, 163, 233);
   font-size: 20px;
   text-align: center;
@@ -73,7 +71,7 @@ ul {
 .weather-icon {
   text-align: center;
   position: relative;
-  bottom: 50px;
+  bottom: 30px;
 }
 .stats {
   text-align: center;
@@ -90,12 +88,11 @@ ul {
   }
   .main-temp {
     font-size: 45px;
-    left: 5px;
   }
 
   .degrees {
-    font-size: 12px;
-    left: 10px;
+    font-size: 10px;
+
     bottom: 30px;
   }
 
