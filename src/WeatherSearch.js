@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Loader from "react-js-loader";
 import "./WeatherSearch.css";
 
-export default function WeatherSearch() {
+export default function WeatherSearch(props) {
   const [ready, setReady] = useState(false);
   const [temperature, setTemperature] = useState(null);
   const [description, setDescription] = useState(null);
@@ -89,7 +88,7 @@ export default function WeatherSearch() {
                 <div className="weather-icon">
                   <img src={icon} alt="weather icon" />
                 </div>
-                <div className="description">{description}</div>
+                <div className="description text-capitalize">{description}</div>
                 <br />
               </div>
 
@@ -116,6 +115,10 @@ export default function WeatherSearch() {
       </div>
     );
   } else {
+    let apiKey = "d6648610e3c1c3aed8194b8aaf46b519";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(getForecast);
     return (
       <div class="container">
         <div class="card">
@@ -147,23 +150,50 @@ export default function WeatherSearch() {
             </div>
           </div>
           <br />
-          <div className="bubble-scale mb-4">
-            <ul>
-              <li className="text-question">
-                <span>How is the weather in your city?</span>
-              </li>
-              <li className="icon-bubble">
-                {" "}
-                <span className={"item"}>
-                  <Loader
-                    type="bubble-ping"
-                    bgColor={"#A2EBF0"}
-                    color={"#A2EBF0"}
-                    size={80}
-                  />
-                </span>
-              </li>
-            </ul>
+          <div className="container px-4 weather-today">
+            <div className="row">
+              <div className="col">
+                <div className="city-name">
+                  <br />
+                  <h1>{props.defaultCity}</h1>
+                </div>
+              </div>
+              <div className="col">
+                <div className="temp">
+                  <span className="main-temp">{temperature}</span>
+                  <span className="degrees">℃ | ℉</span>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container px-4 weather-today">
+            <div className="row">
+              <div className="col">
+                <div className="weather-icon">
+                  <img src={icon} alt="weather icon" />
+                </div>
+                <div className="description text-capitalize">{description}</div>
+                <br />
+              </div>
+
+              <div className="col">
+                <div className="stats">
+                  <ul>
+                    <li className="weekday text-muted">Thursday</li>
+                    <li className="time fw-bold">19:33</li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <strong>Humidity:</strong> {humidity}%
+                    </li>
+                    <li>
+                      <strong>Wind:</strong>
+                      {wind}km/h
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
