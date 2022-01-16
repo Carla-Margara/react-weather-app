@@ -9,7 +9,7 @@ function App() {
       <div className="container">
         <div className="app-wrapper">
           <header className="App-header">
-            <WeatherSearch defaultCity="Madrid" />
+            <WeatherSearch defaultCity="Arecibo" />
             <Footer />
           </header>
         </div>
