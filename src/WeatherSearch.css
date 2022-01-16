@@ -1,46 +1,40 @@
 .card {
   display: block;
   margin: 0px auto;
-  max-width: 550px;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  max-width: 500px;
+  border: none;
 }
 
 .search-city {
   display: block;
   margin: 0px auto;
-  max-width: 550px;
-  margin-top: 2%;
+  max-width: 500px;
 }
 .d-flex {
   position: relative;
-  width: 550px;
+  width: 500px;
 }
 
 h1 {
   font-size: 40px;
-  font-family: monospace;
-  line-height: 10px;
-  color: black;
-  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgba(0, 0, 0, 0.486);
+  text-align: right;
 }
 
-.weekday {
-  font-size: 25px;
-}
-
-.time {
-  font-size: 20px;
-  line-height: 1;
+.now {
+  font-size: 15px;
 }
 
 .temp {
-  text-align: center;
+  text-align: right;
 }
 
 .main-temp {
-  font-size: 60px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 75px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .degrees {
@@ -53,11 +47,9 @@ h1 {
 }
 
 .description {
-  color: rgb(41, 163, 233);
+  color: rgb(63, 180, 226);
   font-size: 20px;
-  text-align: center;
-  position: relative;
-  bottom: 30px;
+  text-align: justify;
 }
 
 ul {
@@ -68,17 +60,11 @@ ul {
 }
 
 .weather-icon {
-  text-align: center;
-  position: relative;
-  bottom: 30px;
+  text-align: justify;
 }
 .stats {
   text-align: center;
   font-size: 25px;
-}
-
-.bubble-scale .text-question {
-  text-align: center;
 }
 
 @media (max-width: 700px) {
@@ -86,11 +72,11 @@ ul {
     font-size: 30px;
   }
   .main-temp {
-    font-size: 45px;
+    font-size: 50px;
   }
 
   .degrees {
-    font-size: 10px;
+    font-size: 15px;
 
     bottom: 30px;
   }
@@ -100,12 +86,9 @@ ul {
   }
 
   .weather-icon {
-    bottom: 25px;
+    bottom: 20px;
   }
 
-  .weekday {
-    font-size: 20px;
-  }
   .time {
     font-size: 16px;
   }
