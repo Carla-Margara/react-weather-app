@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="footer mt-5">
+    <div className="footer mt-3">
       <p id="repository-link">
         <small className="text-muted">
           Hosted with
