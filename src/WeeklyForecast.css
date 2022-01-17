@@ -1,0 +1,23 @@
+.WeeklyForecast {
+  text-align: center;
+}
+
+.Forecast-day {
+  font-size: 18px;
+  color: rgb(37, 149, 201);
+
+  font-family: monospace;
+}
+
+.forecast-temperatures {
+  font-size: 18px;
+}
+
+.min-temp {
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+.max-temp {
+  font-weight: bold;
+}
