@@ -8,10 +8,10 @@ export default function WeatherInfo(props) {
         <div class="col">
           <div class="card ">
             <div class="card-body">
-              <h1 className="city mb-4 me-2">{props.data.city}</h1>
+              <h1 className="city mb-4 ">{props.data.city}</h1>
 
               <div className="temp">
-                <span className="main-temp me-2">
+                <span className="main-temp ">
                   {Math.round(props.data.temperature)}
                 </span>
                 <span className="degrees">℃ | ℉</span>
@@ -21,12 +21,12 @@ export default function WeatherInfo(props) {
         </div>
 
         <div class="col">
-          <div class="card ms-5 mb-2">
+          <div class="card mb-2">
             <div class="card-body">
               <div className="description text-capitalize mb-2 ms-4">
                 {props.data.description}
               </div>
-              <div className="weather-icon mb-2 ms-5">
+              <div className="weather-icon mb-2 ">
                 <img src={props.data.iconUrl} alt="" />
               </div>
             </div>
