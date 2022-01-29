@@ -1,7 +1,10 @@
+.App {
+  background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+}
+
 .App .app-wrapper {
   font-family: "Roboto Mono", monospace;
   max-width: 600px;
-
   margin: 65px auto 0;
 }
 
