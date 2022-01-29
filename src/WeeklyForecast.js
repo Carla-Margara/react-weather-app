@@ -28,6 +28,7 @@ export default function WeeklyForecast(props) {
                 </div>
               );
             }
+            return null;
           })}
         </div>
       </div>
